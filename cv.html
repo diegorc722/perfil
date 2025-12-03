@@ -1,0 +1,728 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta content="width=device-width, initial-scale=1.0" name="viewport">
+	<link rel="icon" type="image/svg+xml" href='data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="white" class="bi bi-person-circle" viewBox="0 0 16 16"><path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0"/><path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8m8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1"/></svg>'>
+	<title>Perfil | Diego Reyes</title>
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+	<link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css">
+	<link href="css/bootstrap.min.css" rel="stylesheet">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"></script>
+	<link href="css/style.css" rel="stylesheet">
+</head>
+<body>
+	<!-- Spinner Inicio -->
+	<div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+		<div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
+			<span class="sr-only">Cargando</span>
+		</div>
+	</div>
+	<!-- Spinner Fin -->
+	<div class="container">
+		<div class="row g-5">
+			<div class="col-lg-4 sticky-lg-top vh-100">
+				<!-- Perfil Inicio -->
+				<div class="d-flex flex-column h-100 text-center overflow-auto shadow">
+					<img class="w-100 img-fluid mb-4" src="img/foto.jpg" alt="Image">
+					<h2 class="text-primary mt-2">Diego Reyes</h2>
+					<div class="mb-4" style="height: 22px;">
+						<h6 class="typed-text-output d-inline-block text-light"></h6>
+						<div class="typed-text d-none">Desarrollador Backend, Desarrollador de Aplicaciones Web, Desarrollador Full Stack, Programador Backend, Desarrollador de Aplicaciones Móviles, QA Técnico</div>
+					</div>
+					<div class="d-flex justify-content-center mt-auto mb-3">
+						<a class="btn btn-lg btn-secondary btn-square mx-1" target="_blank" href="https://github.com/diegorc722"><i class="fab fa-github"></i></a>
+						<a class="btn btn-lg btn-secondary btn-square mx-1" target="_blank" href="https://www.linkedin.com/in/diegorc722/"><i class="fab fa-linkedin-in"></i></a>
+					</div>
+					<div class="d-flex align-items-end justify-content-between border-top">
+						<a href="javascript:descargarCV()" class="btn w-50 border-end">Descargar CV</a>
+						<a href="#contacto" class="btn w-50 btn-scroll">Contáctame</a>
+					</div>
+				</div>
+				<!-- Perfil Fin -->
+			</div>
+			<div class="col-lg-8">
+				<!-- Resumen Inicio -->
+				<section class="py-3 border-bottom">
+					<h1 class="title pb-3 mb-4">Resumen Profesional</h1>
+					<p style="text-align: justify;">Profesional comunicativo, con actitud amable y alta adaptabilidad. Con fuerte compromiso laboral y rápida capacidad de aprendizaje. Destacado por productividad, resolución de problemas y disposición para el trabajo en equipo. Busca aportar valor y continuar su desarrollo profesional.</p>
+					<div class="row mb-4">
+						<div class="col-sm-6 py-1">
+							<span class="fw-medium text-primary">Nombres :</span> Diego Rafael
+						</div>
+						<div class="col-sm-6 py-1">
+							<span class="fw-medium text-primary">Apellidos :</span> Reyes Cardenas
+						</div>
+						<div class="col-sm-6 py-1">
+							<span class="fw-medium text-primary">Cumpleaños :</span> 22 de Julio
+						</div>
+						<div class="col-sm-6 py-1">
+							<span class="fw-medium text-primary">Dirección :</span> La Florida, Santiago, Chile
+						</div>
+						<div class="col-sm-6 py-1">
+							<span class="fw-medium text-primary">Celular :</span> +56 956033957
+						</div>
+						<div class="col-sm-6 py-1">
+							<span class="fw-medium text-primary">Correo :</span> diegorc722@gmail.com
+						</div>
+					</div>
+					<div class="row g-4">
+						<div class="col-sm-6 col-lg-4 col-xl-4">
+							<div class="d-flex bg-secondary p-4">
+								<h1 class="flex-shrink-0 display-5 text-primary mb-0" data-toggle="counter-up">6</h1>
+								<div class="ps-3">
+									<p class="mb-0">Proyectos</p>
+									<h5 class="mb-0">En desarrollo</h5>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+				<!-- Resumen Fin -->
+				<!-- Aptitudes Técnicas Inicio -->
+				<section class="py-3 border-bottom">
+					<h1 class="title pb-3">Aptitudes Técnicas</h1>
+					<div class="row">
+						<div class="col-sm-8 mt-3">
+							<div class="row">
+								<div class="col-sm-12 text-center">
+									<h5>Tecnologías Web</h5>
+								</div>
+								<div class="col-sm-6">
+									<div class="skill mb-4">
+										<div class="d-flex justify-content-between">
+											<p class="mb-2">HTML (Básico)</p>
+											<p class="mb-2">100%</p>
+										</div>
+										<div class="progress">
+											<div class="progress-bar bg-success" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+										</div>
+									</div>
+									<div class="skill mb-4">
+										<div class="d-flex justify-content-between">
+											<p class="mb-2">CSS (Básico)</p>
+											<p class="mb-2">30%</p>
+										</div>
+										<div class="progress">
+											<div class="progress-bar bg-danger" role="progressbar" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100"></div>
+										</div>
+									</div>
+								</div>
+								<div class="col-sm-6">
+									<div class="skill mb-4">
+										<div class="d-flex justify-content-between">
+											<p class="mb-2">Javascript (Intermedio)</p>
+											<p class="mb-2">10%</p>
+										</div>
+										<div class="progress">
+											<div class="progress-bar bg-info" role="progressbar" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100"></div>
+										</div>
+									</div>
+									<div class="skill mb-4">
+										<div class="d-flex justify-content-between">
+											<p class="mb-2">PHP (Básico)</p>
+											<p class="mb-2">90%</p>
+										</div>
+										<div class="progress">
+											<div class="progress-bar bg-primary" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-sm-4 mt-3">
+							<div class="row">
+								<div class="col-sm-12 text-center">
+									<h5>Framework</h5>
+								</div>
+								<div class="col-sm-12">
+									<div class="skill mb-4">
+										<div class="d-flex justify-content-between">
+											<p class="mb-2">Bootstrap (Básico)</p>
+											<p class="mb-2">80%</p>
+										</div>
+										<div class="progress">
+											<div class="progress-bar bg-primary" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
+										</div>
+									</div>
+									<div class="skill mb-4">
+										<div class="d-flex justify-content-between">
+											<p class="mb-2">Angular (Básico)</p>
+											<p class="mb-2">50%</p>
+										</div>
+										<div class="progress">
+											<div class="progress-bar bg-warning" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-sm-4 mt-3">
+							<div class="row">
+								<div class="col-sm-12 text-center">
+									<h5>Tecnologías Móvil</h5>
+								</div>
+								<div class="col-sm-12">
+									<div class="skill mb-4">
+										<div class="d-flex justify-content-between">
+											<p class="mb-2">Android (Básico)</p>
+											<p class="mb-2">40%</p>
+										</div>
+										<div class="progress">
+											<div class="progress-bar bg-danger" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100"></div>
+										</div>
+									</div>
+									<div class="skill mb-4">
+										<div class="d-flex justify-content-between">
+											<p class="mb-2">Kotlin (Básico)</p>
+											<p class="mb-2">60%</p>
+										</div>
+										<div class="progress">
+											<div class="progress-bar bg-warning" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"></div>
+										</div>
+									</div>
+									<div class="skill mb-4">
+										<div class="d-flex justify-content-between">
+											<p class="mb-2">Firebase</p>
+											<p class="mb-2">80%</p>
+										</div>
+										<div class="progress">
+											<div class="progress-bar bg-primary" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-sm-8 mt-3">
+							<div class="row">
+								<div class="col-sm-12 text-center">
+									<h5>Aplicaciones Microsoft</h5>
+								</div>
+								<div class="col-sm-6">
+									<div class="skill mb-4">
+										<div class="d-flex justify-content-between">
+											<p class="mb-2">Word (Intermedio)</p>
+											<p class="mb-2">20%</p>
+										</div>
+										<div class="progress">
+											<div class="progress-bar bg-info" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100"></div>
+										</div>
+									</div>
+									<div class="skill mb-4">
+										<div class="d-flex justify-content-between">
+											<p class="mb-2">Excel (Básico)</p>
+											<p class="mb-2">100%</p>
+										</div>
+										<div class="progress">
+											<div class="progress-bar bg-success" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+										</div>
+									</div>
+									<div class="skill mb-4">
+										<div class="d-flex justify-content-between">
+											<p class="mb-2">PowerPoint (Básico)</p>
+											<p class="mb-2">60%</p>
+										</div>
+										<div class="progress">
+											<div class="progress-bar bg-warning" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"></div>
+										</div>
+									</div>
+								</div>
+								<div class="col-sm-6">
+									<div class="skill mb-4">
+										<div class="d-flex justify-content-between">
+											<p class="mb-2">Project (Básico)</p>
+											<p class="mb-2">100%</p>
+										</div>
+										<div class="progress">
+											<div class="progress-bar bg-success" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+										</div>
+									</div>
+									<div class="skill mb-4">
+										<div class="d-flex justify-content-between">
+											<p class="mb-2">OneDrive (Básico)</p>
+											<p class="mb-2">50%</p>
+										</div>
+										<div class="progress">
+											<div class="progress-bar bg-warning" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+										</div>
+									</div>
+									<div class="skill mb-4">
+										<div class="d-flex justify-content-between">
+											<p class="mb-2">Outlook (Básico)</p>
+											<p class="mb-2">75%</p>
+										</div>
+										<div class="progress">
+											<div class="progress-bar bg-primary" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-sm-8 mt-3">
+							<div class="row">
+								<div class="col-sm-12 text-center">
+									<h5>Administración y Diseño de Base de Datos</h5>
+								</div>
+								<div class="col-sm-6">
+									<div class="skill mb-4">
+										<div class="d-flex justify-content-between">
+											<p class="mb-2">SQL Server (Básico)</p>
+											<p class="mb-2">90%</p>
+										</div>
+										<div class="progress">
+											<div class="progress-bar bg-primary" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
+										</div>
+									</div>
+								</div>
+								<div class="col-sm-6">
+									<div class="skill mb-4">
+										<div class="d-flex justify-content-between">
+											<p class="mb-2">MySQL (Básico)</p>
+											<p class="mb-2">100%</p>
+										</div>
+										<div class="progress">
+											<div class="progress-bar bg-success" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-sm-4 mt-3">
+							<div class="row">
+							<div class="col-sm-12 text-center">
+								<h5>Idiomas</h5>
+							</div>
+							<div class="col-sm-12">
+								<div class="skill mb-4">
+									<div class="d-flex justify-content-between">
+										<p class="mb-2">Inglés (Intermedio)</p>
+										<p class="mb-2">50%</p>
+									</div>
+									<div class="progress">
+										<div class="progress-bar bg-info" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+									</div>
+								</div>
+							</div>
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-sm-12 mt-3 text-center">
+							<h5>Otros Lenguajes de Programación</h5>
+						</div>
+						<div class="col-sm-4">
+							<div class="skill mb-4">
+								<div class="d-flex justify-content-between">
+									<p class="mb-2">C# (Básico)</p>
+									<p class="mb-2">100%</p>
+								</div>
+								<div class="progress">
+									<div class="progress-bar bg-success" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+								</div>
+							</div>
+						</div>
+						<div class="col-sm-4">
+							<div class="skill mb-4">
+								<div class="d-flex justify-content-between">
+									<p class="mb-2">Python (Básico)</p>
+									<p class="mb-2">70%</p>
+								</div>
+								<div class="progress">
+									<div class="progress-bar bg-warning" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"></div>
+								</div>
+							</div>
+						</div>
+						<div class="col-sm-4">
+							<div class="skill mb-4">
+								<div class="d-flex justify-content-between">
+									<p class="mb-2">Java</p>
+									<p class="mb-2">50%</p>
+								</div>
+								<div class="progress">
+									<div class="progress-bar bg-danger" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-sm-8 mt-3">
+							<div class="row">
+								<div class="col-sm-12 text-center">
+									<h5>Control de Versiones</h5>
+								</div>
+								<div class="col-sm-6">
+									<div class="skill mb-4">
+										<div class="d-flex justify-content-between">
+											<p class="mb-2">Git (Básico)</p>
+											<p class="mb-2">60%</p>
+										</div>
+										<div class="progress">
+											<div class="progress-bar bg-warning" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"></div>
+										</div>
+									</div>
+								</div>
+								<div class="col-sm-6">
+									<div class="skill mb-4">
+										<div class="d-flex justify-content-between">
+											<p class="mb-2">Github</p>
+											<p class="mb-2">40%</p>
+										</div>
+										<div class="progress">
+											<div class="progress-bar bg-danger" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100"></div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-sm-4 mt-3">
+							<div class="row">
+								<div class="col-sm-12 text-center">
+									<h5>Metodologías</h5>
+								</div>
+								<div class="col-sm-6">
+									<div class="skill mb-4">
+										<div class="d-flex justify-content-between">
+											<p class="mb-2"></p>
+											<p class="mb-2">SCRUM</p>
+										</div>
+										<div class="progress">
+											<div class="progress-bar bg-dark" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+										</div>
+									</div>
+								</div>
+								<div class="col-sm-6">
+									<div class="skill mb-4">
+										<div class="d-flex justify-content-between">
+											<p class="mb-2">RUP</p>
+											<p class="mb-2"></p>
+										</div>
+										<div class="progress">
+											<div class="progress-bar bg-dark" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-sm-12 mt-3">
+							<h4>Testing y Calidad de Software</h4>
+						</div>
+						<div class="col-sm-6">
+							<div class="skill mb-4">
+								<div class="d-flex justify-content-between">
+									<p class="mb-2">Sonarqube (Calidad de código)</p>
+									<p class="mb-2">95%</p>
+								</div>
+								<div class="progress">
+									<div class="progress-bar bg-success" role="progressbar" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100"></div>
+								</div>
+							</div>
+							<div class="skill mb-4">
+								<div class="d-flex justify-content-between">
+									<p class="mb-2">PHPUnit (Pruebas Unitarias)</p>
+									<p class="mb-2">95%</p>
+								</div>
+								<div class="progress">
+									<div class="progress-bar bg-success" role="progressbar" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100"></div>
+								</div>
+							</div>
+						</div>
+						<div class="col-sm-6">
+							<div class="skill mb-4">
+								<div class="d-flex justify-content-between">
+									<p class="mb-2">Jmeter (Prueba de rendimiento)</p>
+									<p class="mb-2">85%</p>
+								</div>
+								<div class="progress">
+									<div class="progress-bar bg-warning" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
+								</div>
+							</div>
+							<div class="skill mb-4">
+								<div class="d-flex justify-content-between">
+									<p class="mb-2">Selenium (Prueba de interfaz de usuario)</p>
+									<p class="mb-2">90%</p>
+								</div>
+								<div class="progress">
+									<div class="progress-bar bg-primary" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+				<!-- Aptitudes Técnicas Fin -->
+				 <!-- Aptitudes Personales Inicio -->
+				<section class="py-3 border-bottom">
+					<h1 class="title pb-3">Aptitudes Personales</h1>
+					<div class="d-flex flex-wrap gap-2 my-3">
+						<span class="badge bg-info fs-5 p-2 text-dark">Organización y planificación eficaz</span>
+						<span class="badge bg-success fs-5 p-2 text-light">Redacción clara</span>
+						<span class="badge bg-light fs-5 p-2 text-dark">Trabajo en equipo</span>
+						<span class="badge bg-success fs-5 p-2 text-light">Compromiso y puntualidad</span>
+						<span class="badge bg-light fs-5 p-2 text-dark">Actitud positiva y proactiva</span>
+						<span class="badge bg-primary text-dark fs-5 p-2 text-dark">Adaptabilidad</span>
+						<span class="badge bg-info fs-5 p-2 text-dark">Resolución de problemas</span>
+						<span class="badge bg-primary fs-5 p-2 text-dark">Aprendizaje rápido</span>
+						<span class="badge bg-info fs-5 p-2 text-dark">Atención al detalle</span>
+						<span class="badge bg-light fs-5 p-2 text-dark">Manejo de herramientas digitales</span>
+					</div>
+				</section>
+				<!-- Aptitudes Personales Fin -->
+				<!-- Experiencia Inicio -->
+				<section class="py-3 border-bottom">
+					<h1 class="title pb-3 mb-4">Experiencia</h1>
+					<div class="border-start border-4 border-light pt-2 ps-5">
+						<div class="position-relative mb-4">
+							<span class="fa fa-arrow-right fs-4 text-light position-absolute" style="top: -5px; left: -50px;"></span>
+							<h5 class="mb-1">Técnico Multifunción</h5>
+							<p class="mb-2">Indra - Trujillo, Perú | <small>05/2023 - 12/2023</small></p>
+							<ul>
+								<li>Ejecuté mantenimiento preventivo y verificación de equipos críticos de energía, tales como tableros eléctricos, grupos electrógenos, bancos de baterías y rectificadores, asegurando el funcionamiento de los equipos.</li>
+								<li>Realicé mantenimiento preventivo y verificación de equipos críticos de radio (RRU, BBU), equipos de transmisión (IDU, ODU y microondas) y backhaul (Tellabs), asegurando estabilidad en los servicios móviles y de datos.</li>
+								<li>Resolví incidencias en los locales, implementando soluciones inmediatas o escalando al cliente cuando fue necesario, minimizando tiempos de inactividad.</li>
+							</ul>
+						</div>
+						<div class="position-relative mb-4">
+							<span class="fa fa-arrow-right fs-4 text-light position-absolute" style="top: -5px; left: -50px;"></span>
+							<h5 class="mb-1">Gestor de Flota</h5>
+							<p class="mb-2">Experis (ManpowerGroup) - Lima, Perú | <small>10/2021 - 04/2023</small></p>
+							<ul>
+								<li>Gestioné las tarjetas de combustible, de propiedad y SOAT físicas y/o digitales alojadas en la nube, facilitando su acceso a los conductores.</li>
+								<li>Coordiné los mantenimientos preventivos y correctivos de la flota.</li>
+								<li>Supervisé el cumplimiento de las cláusulas contractuales de alquiler entre el proveedor de vehículos y la empresa.</li>
+								<li>Monitoreé diariamente el kilometraje de los vehículos para programar oportunamente los mantenimientos.</li>
+								<li>Supervisé el desempeño de los conductores, reportando conductas inapropiadas a sus supervisores inmediatos.</li>
+							</ul>
+						</div>
+						<div class="position-relative mb-4">
+							<span class="fa fa-arrow-right fs-4 text-light position-absolute" style="top: -5px; left: -50px;"></span>
+							<h5 class="mb-1">Auxiliar de Logística</h5>
+							<p class="mb-2">Experis (ManpowerGroup) - Lima, Perú | <small>01/2021 - 09/2023</small></p>
+							<ul>
+								<li>Registré el ingreso y salida de materiales, consumibles, herramientas y equipos para los proyectos de fibra óptica.</li>
+								<li>Coordiné la entrega de merma de materiales y la distribución a empresas colaboradoras autorizadas por el cliente.</li>
+								<li>Gestioné incidencias logísticas para facilitar el desarrollo del proyecto.</li>
+							</ul>
+						</div>
+						<div class="position-relative mb-4">
+							<span class="fa fa-arrow-right fs-4 text-light position-absolute" style="top: -5px; left: -50px;"></span>
+							<h5 class="mb-1">Team Leader Preventivo</h5>
+							<p class="mb-2">Experis (ManpowerGroup) - Trujillo, Perú | <small>08/2019 - 12/2020</small></p>
+							<ul>
+								<li>Programé y coordiné los mantenimientos preventivos anuales para las antenas de telecomunicaciones.</li>
+								<li>Realicé seguimiento y supervisión diaria del avance, reportando directamente al cliente el estado de los trabajos.</li>
+								<li>Gestioné los accesos a los locales, coordinando con las torreras responsables para asegurar el ingreso oportuno.</li>
+								<li>Durante la crisis sanitaria del 2020, apoyé activamente al equipo técnico para evitar acumulación de mantenimientos, adaptándome a las dificultades.</li>
+							</ul>
+						</div>
+					</div>
+				</section>
+				<!-- Experiencia Fin -->
+				<!-- Servicios Inicio -->
+				<section class="py-3 border-bottom">
+					<h1 class="title pb-3 mb-4">Servicios</h1>
+					<div class="row g-4">
+						<div class="col-md-6">
+							<div class="service-item">
+								<i class="fa fa-2x fa-laptop-code mx-auto mb-4"></i>
+								<h5 class="mb-2">Desarrollo Web</h5>
+								<p class="mb-0">Diseño y desarrollo de páginas web responsivas usando herramientas web nativas y frameworks como Bootstrap y Angular.</p>
+							</div>
+						</div>
+						<div class="col-md-6">
+							<div class="service-item">
+								<i class="fab fa-2x fa-android mx-auto mb-4"></i>
+								<h5 class="mb-2">Desarrollo Móvil</h5>
+								<p class="mb-0"> Desarrollo de aplicaciones Android usando Kotlin, DataBinding, ViewBinding, Fragments y conexión a Firebase.</p>
+							</div>
+						</div>
+						<div class="col-md-6">
+							<div class="service-item">
+								<i class="fa fa-2x fa-vials mx-auto mb-4"></i>
+								<h5 class="mb-2">Testing y Calidad de Software</h5>
+								<p class="mb-0">Pruebas de software incluyendo pruebas unitarias en PHP, pruebas de calidad de software, pruebas de interfaz de usuario (UI),  pruebas de rendimiento y automatización.</p>
+							</div>
+						</div>
+						<div class="col-md-6">
+							<div class="service-item">
+								<i class="fa fa-2x fa-database mx-auto mb-4"></i>
+								<h5 class="mb-2">Bases de Datos</h5>
+								<p class="mb-0">Diseño, consultas y gestión de bases de datos utilizando MySQL y/o SQL Server, con integración a aplicaciones web y móviles.</p>
+							</div>
+						</div>
+					</div>
+				</section>
+				<!-- Servicios Fin -->
+				<!-- Portafolio Inicio -->
+				<section class="py-3 border-bottom">
+					<h1 class="title pb-3 mb-5">Portafolio</h1>
+					<div class="row">
+						<div class="col-12">
+							<div class="row">
+								<div class="col-12 text-center mb-2">
+									<ul class="list-inline mb-4" id="portfolio-flters">
+										<li class="btn btn-secondary active"  data-filter="*"><i class="fa fa-layer-group me-2"></i>Todo</li>
+										<li class="btn btn-secondary" data-filter=".primero"><i class="fa fa-terminal me-2"></i>Consola</li>
+										<li class="btn btn-secondary" data-filter=".segundo"><i class="fa fa-desktop me-2"></i>Escritorio</li>
+										<li class="btn btn-secondary" data-filter=".tercero"><i class="fa fa-globe me-2"></i>Web</li>
+										<li class="btn btn-secondary" data-filter=".cuarto"><i class="fa fa-mobile-alt me-2"></i>Móvil</li>
+									</ul>
+								</div>
+							</div>
+							<div class="row portfolio-container">
+								<div class="col-md-6 mb-4 portfolio-item primero">
+									<div class="position-relative overflow-hidden mb-2">
+										<img class="img-fluid w-100" src="img/1_máquina-expendedora.png" alt="">
+										<div class="portfolio-btn d-flex align-items-center justify-content-evenly">
+											<a href="img/demo-1.mp4" class="glightbox" data-type="video">
+												<i class="fa fa-xs fa-plus text-light"></i>
+											</a>
+											<a href="https://github.com/diegorc722/maquina-expendedora" target="_blank">
+                								<i class="fa fa-xs fa-code text-light"></i>
+            								</a>
+										</div>
+									</div>
+								</div>
+								<div class="col-md-6 mb-4 portfolio-item primero">
+									<div class="position-relative overflow-hidden mb-2">
+										<img class="img-fluid w-100" src="img/2_toque-fama.png" alt="">
+										<div class="portfolio-btn d-flex align-items-center justify-content-evenly">
+											<a href="img/demo-2.mp4" class="glightbox" data-type="video">
+												<i class="fa fa-xs fa-plus text-light"></i>
+											</a>
+											<a href="https://github.com/diegorc722/toque-fama" target="_blank">
+                								<i class="fa fa-xs fa-code text-light"></i>
+            								</a>
+										</div>
+									</div>
+								</div>
+								<div class="col-md-6 mb-4 portfolio-item segundo">
+									<div class="position-relative overflow-hidden mb-2">
+										<img class="img-fluid w-100" src="img/3_calculadora-sueldo.png" alt="">
+										<div class="portfolio-btn d-flex align-items-center justify-content-evenly">
+											<a href="img/demo-3.mp4" class="glightbox" data-type="video">
+												<i class="fa fa-xs fa-plus text-light"></i>
+											</a>
+											<a href="https://github.com/diegorc722/calculadora-sueldo" target="_blank">
+                								<i class="fa fa-xs fa-code text-light"></i>
+            								</a>
+										</div>
+									</div>
+								</div>
+								<div class="col-md-6 mb-4 portfolio-item tercero">
+									<div class="position-relative overflow-hidden mb-2">
+										<img class="img-fluid w-100" src="img/4_sistema-mascota.png" alt="">
+										<div class="portfolio-btn d-flex align-items-center justify-content-evenly">
+											<a href="img/demo-4.mp4" class="glightbox" data-type="video">
+												<i class="fa fa-xs fa-plus text-light"></i>
+											</a>
+											<a href="https://github.com/diegorc722/sistema-mascota" target="_blank">
+                								<i class="fa fa-xs fa-code text-light"></i>
+            								</a>
+										</div>
+									</div>
+								</div>
+								<div class="col-md-6 mb-4 portfolio-item tercero">
+									<div class="position-relative overflow-hidden mb-2">
+										<img class="img-fluid w-100" src="img/5_blog-leones.png" alt="">
+										<div class="portfolio-btn d-flex align-items-center justify-content-evenly">
+											<a href="img/demo-5.mp4" class="glightbox" data-type="video">
+												<i class="fa fa-xs fa-plus text-light"></i>
+											</a>
+											<a href="https://github.com/diegorc722/blog-leones" target="_blank">
+                								<i class="fa fa-xs fa-code text-light"></i>
+            								</a>
+										</div>
+									</div>
+								</div>
+								<div class="col-md-6 mb-4 portfolio-item cuarto">
+									<div class="position-relative overflow-hidden mb-2">
+										<img class="img-fluid w-100" src="img/6_ecommerce.png" alt="">
+										<div class="portfolio-btn d-flex align-items-center justify-content-evenly">
+											<a href="img/demo-6.mp4" class="glightbox" data-type="video">
+												<i class="fa fa-xs fa-plus text-light"></i>
+											</a>
+											<a href="https://github.com/diegorc722/ecommerce" target="_blank">
+                								<i class="fa fa-xs fa-code text-light"></i>
+            								</a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+				<!-- Portafolio Fin -->
+				<!-- Contacto Inicio -->
+				<section class="py-3" id="contacto">
+					<h1 class="title pb-3 mb-3">Contactame</h1>
+					<form action="https://formspree.io/f/xldqjdvw" method="POST" onsubmit="return validarYEnviar(this)">
+						<div class="row g-3">
+							<div class="col-md-6">
+								<div class="form-floating">
+									<input type="text" class="form-control border-0 bg-secondary" id="nombre" name="nombre" placeholder="Ingrese su nombre completo">
+									<label for="name">Nombre Completo</label>
+								</div>
+							</div>
+							<div class="col-md-6">
+								<div class="form-floating">
+									<input type="email" class="form-control border-0 bg-secondary" id="correo" name="correo" placeholder="Ingrese su correo electrónico">
+									<label for="email">Correo Electrónico</label>
+								</div>
+							</div>
+							<div class="col-12">
+								<div class="form-floating">
+									<input type="text" class="form-control border-0 bg-secondary" id="asunto" name="asunto" placeholder="Ingrese titulo del mensaje">
+									<label for="subject">Asunto</label>
+								</div>
+							</div>
+							<div class="col-12">
+								<div class="form-floating">
+									<textarea class="form-control border-0 bg-secondary" placeholder="Deja tu mensaje aquí!" id="mensaje" name="mensaje" style="height: 200px"></textarea>
+									<label for="message">Mensaje</label>
+								</div>
+							</div>
+							<div class="col-12">
+								<button class="btn btn-primary w-100 py-3" type="submit">Enviar</button>
+							</div>
+						</div>
+					</form>
+				</section>
+				<!-- Contacto Fin -->
+				<!-- Mención Inicio -->
+				<footer>
+					<div class="bg-secondary text-light text-center p-1">
+						<p class="text-primary m-0">&copy; Todos los derechos reservados. Diseñado por <a href="https://htmlcodex.com">HTML Codex</a></p>
+					</div>
+				</footer>
+				<!-- Mención Fin -->
+			</div>
+		</div>
+	</div>
+	<!-- Back to Top -->
+	<a class="back-to-top"><i class="fa fa-angle-double-up"></i></a>
+	<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+	<script src="lib/wow/wow.min.js"></script>
+	<script src="lib/typed/typed.min.js"></script>
+	<script src="lib/easing/easing.min.js"></script>
+	<script src="lib/waypoints/waypoints.min.js"></script>
+	<script src="lib/counterup/counterup.min.js"></script>
+	<script src="lib/owlcarousel/owl.carousel.min.js"></script>
+	<script src="lib/isotope/isotope.pkgd.min.js"></script>
+	<script src="lib/lightbox/js/lightbox.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>
+	<script src="js/main.js"></script>
+	<script>
+	    const lightbox = GLightbox({
+    	    touchNavigation: true,
+        	loop: true
+    	});
+	</script>
+</body>
+</html>
