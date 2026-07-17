@@ -216,3 +216,41 @@
 .testimonial-carousel .owl-dot.active {
   background: var(--primary);
 }
+
+.portfolio-card {
+    cursor: pointer;
+}
+
+.portfolio-img {
+    transition: transform .5s ease;
+}
+
+.portfolio-card:hover .portfolio-img {
+    transform: scale(1.1);
+}
+
+.portfolio-overlay {
+    opacity: 0;
+    transition: opacity .35s ease;
+}
+
+.portfolio-card:hover .portfolio-overlay {
+    opacity: 0.5;
+}
+
+.gslide-title {
+    font-size: 1.5rem !important;
+    color: var(--primary) !important;
+    font-weight: 700 !important;
+}
+
+.gslide-desc,
+.gslide-desc p {
+    font-size: 1.25rem !important;
+    color: #000000 !important;
+}
+
+.glightbox-mobile .gslide-desc,
+.glightbox-mobile .gslide-desc p {
+    color: #FFFFFF !important;
+}
