@@ -103,7 +103,7 @@ async function descargarCV() {
     try {
         // Obtener el archivo encriptado desde GitHub Pages
         const response = await fetch("cv/CV.enc");
-        if (!response.ok) throw new Error("No se pudo cargar prueba.enc");
+        if (!response.ok) throw new Error("No se pudo cargar CV.enc");
 
         const encryptedContent = await response.text();
 
