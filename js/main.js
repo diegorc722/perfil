@@ -93,6 +93,25 @@
 	});
 })(jQuery);
 
+async function obtenerClaveCV(password, salt) {
+    const enc = new TextEncoder();
+    const km = await crypto.subtle.importKey(
+        "raw",
+        enc.encode(password),
+        { name: "PBKDF2" },
+        false,
+        ["deriveKey"]
+    );
+
+    return crypto.subtle.deriveKey(
+        { name: "PBKDF2", salt, iterations: 100000, hash: "SHA-256" },
+        km,
+        { name: "AES-GCM", length: 256 },
+        false,
+        ["decrypt"]
+    );
+}
+
 async function descargarCV() {
     const clave = prompt("Por favor, ingresa la clave para descargar el CV:");
     if (!clave) {
@@ -105,42 +124,41 @@ async function descargarCV() {
         const response = await fetch("cv/CV.enc");
         if (!response.ok) throw new Error("No se pudo cargar CV.enc");
 
-        const encryptedContent = await response.text();
+        // El archivo es binario: salt (16 bytes) + iv (12 bytes) + datos cifrados
+        const buffer = await response.arrayBuffer();
+        const data = new Uint8Array(buffer);
 
-        // Desencriptar a WordArray
-        const decrypted = CryptoJS.AES.decrypt(encryptedContent, clave);
+        const salt = data.slice(0, 16);
+        const iv = data.slice(16, 28);
+        const encrypted = data.slice(28);
 
-        if (!decrypted || decrypted.sigBytes <= 0) {
-            throw new Error("La clave es incorrecta o el archivo está corrupto.");
-        }
+        // Derivar la clave con PBKDF2 (mismo método usado al encriptar)
+        const key = await obtenerClaveCV(clave, salt);
 
-        // Convertir WordArray a ArrayBuffer (binario)
-        function wordArrayToArrayBuffer(wordArray) {
-            const len = wordArray.sigBytes;
-            const u8 = new Uint8Array(len);
-            const words = wordArray.words;
+        // Desencriptar con AES-GCM
+        const decryptedBuffer = await crypto.subtle.decrypt(
+            { name: "AES-GCM", iv },
+            key,
+            encrypted
+        );
 
-            let offset = 0;
-            for (let i = 0; i < len; i++) {
-                const byte = (words[i >>> 2] >>> (24 - (i % 4) * 8)) & 0xFF;
-                u8[offset++] = byte;
-            }
-            return u8.buffer;
-        }
+        const full = new Uint8Array(decryptedBuffer);
 
-        const arrayBuffer = wordArrayToArrayBuffer(decrypted);
+        // Los primeros bytes son un JSON de metadata (incluye el nombre del archivo)
+        const end = full.indexOf(125) + 1; // 125 = código del caracter '}'
+        const meta = JSON.parse(new TextDecoder().decode(full.slice(0, end)));
+        const fileData = full.slice(end);
 
-        // Crear Blob PDF válido
-        const blob = new Blob([arrayBuffer], { type: "application/pdf" });
-
-        // Descargar
+        // Crear Blob y descargar
+        const blob = new Blob([fileData], { type: "application/pdf" });
         const link = document.createElement("a");
         link.href = URL.createObjectURL(blob);
-        link.download = "DiegoReyes_CV.pdf";
+        link.download = meta.name || "DiegoReyes_CV.pdf";
         link.click();
 
     } catch (err) {
-        alert("Error: " + err.message);
+        alert("Contraseña incorrecta o el archivo está corrupto.");
+        console.error(err);
     }
 }
 
@@ -178,4 +196,3 @@ function validarYEnviar(form) {
 	setTimeout(() => form.reset(), 1000);
     return true;
 }
-
